@@ -1,9 +1,13 @@
 import subprocess
 #subprocess.check_output(['ls','-l']) #all that is technically needed...
-
+import os
 
 def sayIt( message ):
-    print subprocess.check_output(['git','add', '.'])
+    #print subprocess.check_output(['git commit', '-m Initial Files'])
+    
+    os.system("git add .")
+    os.system("git commit -m 'Initial Commit'")
+    os.system("git push")
 """    curl -X POST -u "{username}":"{password}" \
     --header "Content-Type: application/json" \
     --header "Accept: audio/wav" \
